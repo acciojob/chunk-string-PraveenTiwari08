@@ -1,6 +1,10 @@
 function stringChop(str, size) {
     size = size || 1; // If size is not provided, default to 1
     let array = [];
+    // If str is null or undefined, return an empty array
+    if (!str) {
+        return array;
+    }
     // If the chunk size is greater than or equal to the length of the string, return the whole string
     if (size >= str.length) {
         return [str];
